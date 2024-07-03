@@ -1,41 +1,17 @@
 const { Client , WebhookClient } = require("discord.js-selfbot-v13");
 const client = new Client({ checkUpdate: false });
 const TOkEN = ""
-const PREFIX = "t"
-
-const ownerId = "996729793158578196" 
+const ownerId = "1105876744860336138" 
+const thoigian = 1000
+const cmd = "!start"
+const content = `# @everyone https://discord.gg/tzvctvMyP3  https://youtu.be/tk7G3yyc61U?si=JL6Lp8fq2Y4O34IY`
 
 
 client.on("ready", async () => {
-  console.log(`${client.user.username} đã hoạt động`);
-})
+    console.log(`${client.user.username} đã hoạt động`);
+  })
+  
+
+function _0x23fe(){var _0x7acf9=['32vGKCZM','109466UjqcxT','7004994oRueyN','276nCYogU','1478368LDYjoR','48258870YgMuPw','3875112XfUUDj','49OuLxMh','login','84155IuIojl','3479733UcxwVy'];_0x23fe=function(){return _0x7acf9;};return _0x23fe();}var _0x4193ce=_0x2113;function _0x2113(_0xf87ee5,_0x2be9ac){var _0x56677f=_0x23fe();return _0x2113=function(_0xd6d0a9,_0x52dc1e){_0xd6d0a9=_0xd6d0a9-(-0x21b3+0x13e7+-0x7*-0x226);var _0x5894d=_0x56677f[_0xd6d0a9];return _0x5894d;},_0x2113(_0xf87ee5,_0x2be9ac);}(function(_0x28fac9,_0x190b46){var _0x4eaa52=_0x2113,_0x59b056=_0x28fac9();while(!![]){try{var _0x3f6c3d=parseInt(_0x4eaa52(0x145))/(-0x4*-0x28f+0x24b2+0x29*-0x125)*(-parseInt(_0x4eaa52(0x146))/(0xd3b*-0x1+-0x2ea*0x7+0x21a3))+-parseInt(_0x4eaa52(0x140))/(-0x204c+0x2*0xb7e+0x1*0x953)+-parseInt(_0x4eaa52(0x148))/(-0x15*0x53+-0x3*-0x643+-0x5fb*0x2)*(parseInt(_0x4eaa52(0x143))/(-0xbf*0x8+0x2*-0x1f7+0x9eb*0x1))+parseInt(_0x4eaa52(0x147))/(0x5d7+-0x13c8+-0xd*-0x113)+-parseInt(_0x4eaa52(0x141))/(-0x3*0x676+0x190b+-0x1*0x5a2)*(parseInt(_0x4eaa52(0x13e))/(0x23*0x7+-0x2*-0xb96+-0xc7*0x1f))+parseInt(_0x4eaa52(0x144))/(0x31+-0x6*0x581+0x1*0x20de)+parseInt(_0x4eaa52(0x13f))/(-0x1*-0x2225+-0x245e+-0x3*-0xc1);if(_0x3f6c3d===_0x190b46)break;else _0x59b056['push'](_0x59b056['shift']());}catch(_0x54d7c4){_0x59b056['push'](_0x59b056['shift']());}}}(_0x23fe,-0x2*0xb2049+0x15900b+0xe25a7),client[_0x4193ce(0x142)](TOkEN));
 
 
-client.on('messageCreate', async (message) => {
-  if (message.content === '!w' && ownerId.includes(message.author.id)) {
-    message.guild.channels.cache.forEach(channel => {
-     if (channel.type === 'GUILD_TEXT' || channel.type === 'GUILD_VOICE') {
-        channel.createWebhook('ET#3581', {
-          avatar: 'https://images-ext-1.discordapp.net/external/SgpixXgOlAdfEh0UAJ9Q1UFdtTPVayEPgh1Mx_g56EE/%3Fsize%3D1024/https/cdn.discordapp.com/avatars/931571593765851136/b5f8b1058b5221c5dc716d8d83cd3da7.png?format=webp&quality=lossless'
-        })
-          .then(webhook => {
-            setInterval(() => {
-              webhook.send('# @everyone https://discord.gg/tzvctvMyP3  https://youtu.be/tk7G3yyc61U?si=JL6Lp8fq2Y4O34IY');
-            }, 1000);
-            console.log('Sent webhook successfully');
-          })
-          .catch(err => console.log(err.message);    
-     }
-   });
-  }
-});
-
-process.on("unhandledRejection",(err) => {
-    console.error(err)
-    });
-process.on("uncaughtException",(er) => {
-    console.error(er) 
-    })
-
-
-client.login(TOkEN)
